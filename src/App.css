@@ -1,0 +1,50 @@
+/*
+    image-container: 
+    A new div will be used for the overlay, which becomes
+    present when user hovers over the image. This will allow the image to scale and
+    a overlay with opacity properties will show some text.
+    */
+
+body {
+  background: #ffb6c1;
+  color: #ffffff;
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  border-radius: 8px;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 8px;
+  max-width: 400px;
+  transition: transform 0.2s;
+}
+
+.image-container:hover {
+  cursor: pointer;
+  border-radius: 8px;
+  transform: scale(0.7);
+  max-width: auto;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  max-width: 50%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: left;
+}
